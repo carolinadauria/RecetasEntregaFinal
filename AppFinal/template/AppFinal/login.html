@@ -1,0 +1,18 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<body>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <h3>Ingrese usuario y contraseña</h3>
+        {{form.as_p}}
+
+        <button style="background-color: rgb(6, 156, 6);color: aliceblue;", type="submit">Iniciar Sesión</button>
+    </form>
+</body>
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b>Iniciar Sesión</b></head>
+{% endblock %} 

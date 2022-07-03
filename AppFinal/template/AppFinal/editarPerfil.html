@@ -1,0 +1,21 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<body>
+    <h3>Editar perfil de {{usuario}}</h3>
+        <form action="{% url 'EditarPerfil' %}" method="POST">{% csrf_token %} 
+            <table>
+                {{miFormulario.as_table}}
+                <button style="background-color: rgb(155, 207, 155);">
+                    <a href="{% url 'EliminarPerfil' user %}">Eliminar usuario</a>
+                </button>
+            </table>
+            <input type="submit", value="Confirmar cambios">
+        </form>
+</body>
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b>Editar perfil</b></head>
+{% endblock %} 

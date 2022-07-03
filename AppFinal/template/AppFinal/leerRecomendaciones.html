@@ -1,0 +1,45 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+            <div class="post-preview">
+                <!-- <a href="post.html">-->
+                        {% for recomendacion in recomendaciones %}
+
+                            <li><b><i>{{recomendacion.nombre}}</i></b></li>
+                            <button style="background-color: rgb(155, 207, 155);">
+                                <a href="{% url 'EliminarRecomendacion' recomendacion.nombre %}">Eliminar</a>
+                            </button>
+                            <button style="background-color: rgb(155, 207, 155);">
+                                <a href="{% url 'EditarRecomendacion' recomendacion.nombre %}">Editar</a>
+                            </button>
+                            <button style="background-color: rgb(155, 207, 155);">
+                                <a href="{% url 'DetalleRecomendacion' recomendacion.nombre %}">Ver más información</a>
+                            </button>
+
+                        {% endfor %}
+                    </a>
+                    </h2>
+                </a>
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Pager-->
+            <a class="form-control::file-selector-button" href="{% url 'RecomendacionFormulario' %}">Añadir nueva recomendación</a>
+            <hr class="my-4" />
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b>Recomendaciones</b></head>
+{% endblock %} 

@@ -1,0 +1,36 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="post.html">
+                    <h2 class="post-title">
+                        {% for recomendacion in object_list %}
+                            <p>{{recomendacion.nombre}}</p>
+                        {% endfor %}
+                    </h2>
+                </a>
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Pager-->
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Posteos Anteriores →</a></div>
+            <hr class="my-4" />
+            <a class="form-control::file-selector-button" href="{% url 'RecomendacionFormulario' %}">Añadir nueva recomendación</a>
+            <hr class="my-4" />
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b>Recomendaciones</b></head>
+{% endblock %} 

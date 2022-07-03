@@ -1,0 +1,16 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<form action={% url 'RecomendacionFormulario' %} method="POST">{% csrf_token %}
+    <h1 class="navbar-toggler navbar-toggler-left">Ingresar la información del producto que deseas recomendar</h1>
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b>Nueva Recomendación</b></head>
+{% endblock %} 

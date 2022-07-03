@@ -1,0 +1,18 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<body>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <h3>Ingrese un usuario y contraseña</h3>
+        {{form.as_p}}
+
+        <button style="background-color: rgb(6, 156, 6);color: aliceblue;", type="submit">Registrarme</button>
+    </form>
+</body>
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b>Registrate</b></head>
+{% endblock %} 

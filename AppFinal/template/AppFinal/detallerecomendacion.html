@@ -1,0 +1,20 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <p><b>Producto:</b> <i>{{ recomendacion.nombre }}</i></p>
+                        <p><b>Comentarios:</b> <i>{{ recomendacion.comentarios }}</i></p>
+                        <p>
+                            <a href="{% url 'Recomendaciones' %}" style="color:rgb(3, 109, 3)">Regresar</a>
+                        </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b><i>{{ recomendacion.nombre }}</i></b></head>
+{% endblock %} 

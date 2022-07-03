@@ -1,0 +1,67 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="{% url 'Receta1' %}">
+                    <h2 class="post-title">Budín de Limón</h2>
+                    <h3 class="post-subtitle">Suave y esponjoso</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    veggiencasa
+                    el 24/06/2022
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+
+                        <!-- Post preview-->
+                        <div class="post-preview">
+                            <a href="{% url 'Receta2' %}">
+                                <h2 class="post-title">Muffins de Limón y Arándanos</h2>
+                                <h3 class="post-subtitle">Fáciles, ricos y de pocos ingredientes</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by
+                                hacialoprofundo
+                                el 25/06/2022
+                            </p>
+                        </div>
+                        <!-- Divider-->
+                        <hr class="my-4" />
+
+                        <!-- Post preview-->
+                        <div class="post-preview">
+                            <a href="{% url 'Receta3' %}">
+                                <h2 class="post-title">Alitas de coliflor a la barbacoa</h2>
+                                <h3 class="post-subtitle">Una forma diferente de comer coliflor</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by
+                                veganaarg
+                                el 26/06/2022
+                            </p>
+                        </div>
+                        <!-- Divider-->
+                        <hr class="my-4" />                       
+
+
+
+
+
+            
+    </div>
+</div>
+
+
+{% endblock %}
+{% block section_name %}
+<br>
+
+<head><b>Recetas</b></head>
+{% endblock %} 
